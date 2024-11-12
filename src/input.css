@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+     :root {
+    --dark: #000;
+    --light: #fff;
+}
+     body {
+    @apply font-poppins overflow-x-hidden bg-light text-dark ;
+  }
+    .container {
+        @apply max-w-[1200px] w-full px-2 mx-auto lg:px-[10rem];
+    }
+  
+}
+
+
+@layer components {
+.header h1, li{
+    @apply hover:underline cursor-pointer;
+}
+
+/* BANNER */
+.largeCard img{
+    @apply lg:w-[50rem];
+}
+.card__sm img{
+    @apply w-[100%] h-[9rem] object-cover lg:w-[15rem];
+}
+.card__sm small{
+    @apply text-gray;
+}
+.card__sm h2{
+    @apply w-[8rem];
+}
+.largeCard--text small{
+    @apply text-gray
+}
+.latest__largeCard img{
+    @apply w-[100%] h-[18rem] object-cover;
+}
+.feature__largeCard{
+    @apply lg:flex lg:gap-5;
+}
+.feature__largeCard--text{
+    @apply lg:w-[28rem] ;
+}
+.feature__largeCard--text small{
+    @apply text-gray ;
+}
+.feature__largeCard img{
+    @apply w-[100%] h-[18rem] object-cover lg:w-[18rem];
+}
+.feature__text--content small{
+    @apply text-gray;
+}
+.feature__text--content{
+    @apply lg:max-w-[25rem]  border-b-2 border-gray2 pb-10 mb-10 lg:pb-10 lg:mb-5;
+}
+.feature__text--content:last-child{
+    @apply border-hidden;
+}
+}
+
